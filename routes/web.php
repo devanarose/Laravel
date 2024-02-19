@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\firstcontroller;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [firstcontroller::class,'homepage']);
+Route::get('/about', [firstcontroller::class,'about']);
+Route::get('/contact', [firstcontroller::class,'contact']);
