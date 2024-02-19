@@ -14,6 +14,7 @@ use App\Http\Controllers\firstcontroller;
 |
 */
 
+
 Route::get('/', [firstcontroller::class,'homepage']);
 Route::get('/about', [firstcontroller::class,'about']);
 Route::get('/contact', [firstcontroller::class,'contact']);
