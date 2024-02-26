@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\firstcontroller;
+use App\Http\Controllers\Usercontroller;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,3 +19,4 @@ use App\Http\Controllers\firstcontroller;
 Route::get('/', [firstcontroller::class,'homepage']);
 Route::get('/about', [firstcontroller::class,'about']);
 Route::get('/contact', [firstcontroller::class,'contact']);
+Route::post('/register', [Usercontroller::class,'register']);
