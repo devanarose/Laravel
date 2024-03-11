@@ -8,7 +8,7 @@ class UserController extends Controller
 {
     function register(Request $request){ // we will add validation
         $IncomingFields = $request -> validate([
-            'username' => 'required',
+            'username' => ['required', 'min:4','max:20'],
             'email' => 'required',
             'password'=> 'required'
         ]);
