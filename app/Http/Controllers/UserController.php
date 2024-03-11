@@ -10,9 +10,21 @@ class UserController extends Controller
         $IncomingFields = $request -> validate([
             'username' => ['required', 'min:4','max:20'],
             'email' => 'required',
-            'password'=> 'required'
+            'password'=> ['required', 'confirmed']
         ]);
         User::create($IncomingFields);
         return view('homepage');
     }
-}
+
+    function login(Request $request) { 
+        $IncomingFields = $request -> validate([
+            'username' => ['required'],
+            'password'=> ['required']
+        ]);
+        if (auth()->attempt(['name' => $IncomingFields['name'] , 'password' => $IncomingFields['password']]));
+        }
+        
+    }
+
+
+

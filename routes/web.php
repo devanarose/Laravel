@@ -20,3 +20,4 @@ Route::get('/', [firstcontroller::class,'homepage']);
 Route::get('/about', [firstcontroller::class,'about']);
 Route::get('/contact', [firstcontroller::class,'contact']);
 Route::post('/register', [Usercontroller::class,'register']);
+Route::view('login',[Usercontroller::class,'login']);
