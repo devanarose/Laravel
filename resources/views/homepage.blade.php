@@ -10,6 +10,9 @@
     <form action="register" method="POST">
       @csrf
       <div class="mb-3">
+        @error('username') 
+        {{$message}}
+        @enderror
         <label for="exampleInputEmail1" class="form-label">Username</label>
         <input name="username" type="email" class="form-control"name="email" id="exampleInputEmail1" aria-describedby="emailHelp">
         <div id="user" class="form-text"></div>
@@ -20,6 +23,9 @@
         <div id="emailHelp" class="form-text"></div>
       </div>
       <div class="mb-3">
+        @error('password') 
+        {{$message}}
+        @enderror
         <label for="exampleInputPassword1" class="form-label">Password</label>
         <input name="password" type="password" class="form-control" id="exampleInputPassword1">
       </div>

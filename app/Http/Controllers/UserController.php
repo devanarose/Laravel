@@ -13,5 +13,6 @@ class UserController extends Controller
             'password'=> 'required'
         ]);
         User::create($IncomingFields);
+        return view('homepage');
     }
 }
