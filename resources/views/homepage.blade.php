@@ -8,6 +8,7 @@
 <body>
   <x-layout>
     <form action="register" method="POST">
+      @csrf
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Username</label>
         <input name="username" type="email" class="form-control"name="email" id="exampleInputEmail1" aria-describedby="emailHelp">
